@@ -1,4 +1,5 @@
 function taskFunc(id, titleId) {
+    alert('Board Updated SuccessFully')
     TaskAssigned()
     const element = document.getElementById(id);
     element.disabled = true;
@@ -26,7 +27,11 @@ function TaskAssigned() {
     const taskAssignedTextNum = parseInt(taskAssignedText);
 
     const newTaskAssigned = taskAssignedTextNum - 1;
-    taskAssigned.innerText = '0' + newTaskAssigned
+    taskAssigned.innerText = '0' + newTaskAssigned;
+
+    if(newTaskAssigned === 0){
+        alert('Congrates!!! You have completed all the current task');
+    }
 }
 
 function TotalTaskDone() {
@@ -39,7 +44,9 @@ function TotalTaskDone() {
 
 // reload page to clear prev data
 function clearAll() {
-    window.location.href = './../index.html';
+    // window.location.href = './../index.html';
+    const completedTasks = document.getElementById('Completed-tasks');
+    completedTasks.innerHTML = '';
 }
 
 // today
@@ -53,4 +60,14 @@ const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: '2
 today.innerHTML = `
 <p class="font-medium text-gray-600">${day},</p>
 <h5 class="font-bold">${formattedDate}</h5>
-`
+`;
+
+
+function changeTheme(){
+   console.log('he')
+    const themeColor = ['bg-sky-100','bg-red-100','bg-green-100','bg-orange-100','bg-blue-100'];
+    console.log(themeColor[1])
+    document.body.classList.add(themeColor[1])
+
+    console.log(document.body.classList)
+}
