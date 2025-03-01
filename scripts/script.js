@@ -1,4 +1,4 @@
-function taskFunc(id,titleId) {
+function taskFunc(id, titleId) {
     TaskAssigned()
     const element = document.getElementById(id);
     element.disabled = true;
@@ -6,7 +6,7 @@ function taskFunc(id,titleId) {
 
     // showing in activity log
     const titleElement = document.getElementById(titleId);
-    const title = titleElement.innerText; 
+    const title = titleElement.innerText;
 
     const date = new Date();
     const timeNow = date.toLocaleTimeString()
@@ -41,3 +41,16 @@ function TotalTaskDone() {
 function clearAll() {
     window.location.href = './../index.html';
 }
+
+// today
+const today = document.getElementById('today');
+
+const date = new Date();
+let day = date.toLocaleString('en-us', { weekday: 'short' });
+
+const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }).replace(',', '');
+
+today.innerHTML = `
+<p class="font-medium text-gray-600">${day},</p>
+<h5 class="font-bold">${formattedDate}</h5>
+`
