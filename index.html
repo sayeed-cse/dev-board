@@ -1,20 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+
+<body class="bg-sky-100">
     <!-- header section start -->
-    <header>
-        <div>
-            <a href="">
-                <img src="" alt="">
+    <header class="container mx-auto py-5">
+        <div class="p-6 bg-white rounded-2xl flex items-center justify-between">
+            <a href="" class="flex items-baseline text-4xl">
+                <img src="./assets/logo.png" alt="" class="me-2 h-12">
+                dev
+                <span class="font-bold">Board</span>
             </a>
+            <div class="flex items-center gap-5">
+                <p class="flex gap-1 items-center bg-blue-50 py-1 px-4 rounded-full">
+                    <img src="./assets/checkbox.png" alt="">
+                    <span id="total-task-done" class="text-3xl font-extrabold">23</span>
+                </p>
+                <img src="./assets/theme-btn.png" alt="">
+            </div>
         </div>
     </header>
     <!-- header section end -->
+    <!--main section start  -->
+    <main class="container mx-auto pb-28">
+        <section class="grid grid-cols-12 gap-6">
+            <div class="col-span-9 bg-white rounded-2xl ">
+                <!-- dashboard section start -->
+                <section class="grid grid-cols-12 gap-6 p-6">
+                    <div class="col-span-3 bg-sky-50 p-5 flex items-center gap-5 rounded-xl">
+                        <div class="rounded-full p-5 bg-white">
+                            <img src="./assets/checkbox.png" alt="">
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-600">Task Assigned</p>
+                            <h5 id="task-assigned" class="font-bold text-3xl">06</h5>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-6 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] p-5 flex items-center gap-5 rounded-xl">
+                        <div class="rounded-full p-5">
+                            <img src="./assets/board.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-2xl font-medium text-gray-100">Discover Something <br> New Today!</p>
+                        </div>
+                    </div>
+                    <div class="col-span-3 bg-sky-50 p-5 flex items-center gap-4 rounded-xl">
+                        <div class="rounded-full p-4 bg-white">
+                            <img src="./assets/calender.png" alt="">
+                        </div>
+                        <div class="text-2xl">
+                            <p class="font-medium text-gray-600">Wed,</p>
+                            <h5 id="task-assigned" class="font-bold">Jul 28 2025</h5>
+                        </div>
+                    </div>
+                </section>
+                <!-- dashboard section end -->
+                <!-- all tasks section start -->
+                <section class="grid grid-cols-3 p-6 gap-8">
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">ShopEase</p>
+                            <h5 class="text-2xl font-medium mb-4">Fix Mobile Button Issue </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and
+                                    ensure
+                                    onClick works properly
+                                    and ensure onClick works properly</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button id="ShopEase" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">CloudSync</p>
+                            <h5 class="text-2xl font-medium mb-4">Add Dark Mode </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button id="CloudSync" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">SwiftPay</p>
+                            <h5 class="text-2xl font-medium mb-4">Optimize  Home page </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button id="SwiftPay" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Meta</p>
+                            <h5 class="text-2xl font-medium mb-4">Add new emoji 🤲 </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button id="Meta" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Google LLC</p>
+                            <h5 class="text-2xl font-medium mb-4">Integrate OpenAI API </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button  id="GoogleLLC" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-sky-50 p-6 rounded-2xl">
+                        <div class="mb-6">
+                            <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Glassdoar</p>
+                            <h5 class="text-2xl font-medium mb-4">Improve Job searching </h5>
+                            <div class="p-4 bg-white rounded-lg text-gray-600">
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-medium">25th march 2025</p>
+                            </div>
+                            <button  id="Glassdoar" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- all tasks section end -->
+            </div>
+            <div class="col-span-3 bg-white rounded-2xl "></div>
+        </section>
+    </main>
+    <!--main section end  -->
+
+
+    <script src="./scripts/script.js"></script>
 
 </body>
+
 </html>
