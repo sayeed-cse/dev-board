@@ -29,7 +29,7 @@ function TaskAssigned() {
     const newTaskAssigned = taskAssignedTextNum - 1;
     taskAssigned.innerText = '0' + newTaskAssigned;
 
-    if(newTaskAssigned === 0){
+    if (newTaskAssigned === 0) {
         alert('Congrates!!! You have completed all the current task');
     }
 }
@@ -63,11 +63,22 @@ today.innerHTML = `
 `;
 
 
-function changeTheme(){
-   console.log('he')
-    const themeColor = ['bg-sky-100','bg-red-100','bg-green-100','bg-orange-100','bg-blue-100'];
-    console.log(themeColor[1])
-    document.body.classList.add(themeColor[1])
+function changeTheme() {
+    const themeColor = ['bg-sky-100', 'bg-red-100', 'bg-green-100', 'bg-orange-100', 'bg-blue-100'];
+
+    let randomColor = 0;
+    let random = Math.round(Math.random() * 5);
+    console.log(random);
+    if (randomColor === random) {
+        random = Math.round(Math.random() * 5);
+    }
+    else {
+        randomColor = random;
+        document.body.classList = themeColor[randomColor]
+
+    }
+
+
 
     console.log(document.body.classList)
 }
