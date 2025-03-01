@@ -7,6 +7,13 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-sky-100">
@@ -68,7 +75,7 @@
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">ShopEase</p>
-                            <h5 class="text-2xl font-medium mb-4">Fix Mobile Button Issue </h5>
+                            <h5 id="ShopEaseTitle" class="text-2xl font-medium mb-4">Fix Mobile Button Issue </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
                                 <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and
                                     ensure
@@ -81,15 +88,17 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button id="ShopEase" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                            <button id="ShopEase" onclick="taskFunc(this.id,'ShopEaseTitle')"
+                                class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">CloudSync</p>
-                            <h5 class="text-2xl font-medium mb-4">Add Dark Mode </h5>
+                            <h5 id="CloudSyncTitle" class="text-2xl font-medium mb-4">Add Dark Mode </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
-                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS
+                                    variables dynamically, and apply a smooth transition effect.</p>
                             </div>
                         </div>
                         <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
@@ -97,15 +106,17 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button id="CloudSync" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                            <button id="CloudSync" onclick="taskFunc(this.id,'CloudSyncTitle')"
+                                class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">SwiftPay</p>
-                            <h5 class="text-2xl font-medium mb-4">Optimize  Home page </h5>
+                            <h5 id="SwiftPayTitle" class="text-2xl font-medium mb-4">Optimize Home page </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
-                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and
+                                    ensure onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
                         </div>
@@ -114,15 +125,17 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button id="SwiftPay" onclick="taskFunc(this.id)" class="btn btn-primary">Completed</button>
+                            <button id="SwiftPay" onclick="taskFunc(this.id,'SwiftPayTitle')"
+                                class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Meta</p>
-                            <h5 class="text-2xl font-medium mb-4">Add new emoji 🤲 </h5>
+                            <h5 id="metaTitle" class="text-2xl font-medium mb-4">Add new emoji 🤲 </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
-                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                <p class="line-clamp-2">Debug using Chrome DevTools, check for overlapping elements, and
+                                    ensure onClick works properly
                                     and ensure onClick works properly</p>
                             </div>
                         </div>
@@ -131,15 +144,16 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button id="Meta" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                            <button id="Meta" onclick="taskFunc(this.id,'metaTitle')" class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Google LLC</p>
-                            <h5 class="text-2xl font-medium mb-4">Integrate OpenAI API </h5>
+                            <h5 id="GoogleLLCTitle" class="text-2xl font-medium mb-4">Integrate OpenAI API </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
-                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS
+                                    variables dynamically, and apply a smooth transition effect.</p>
                             </div>
                         </div>
                         <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
@@ -147,15 +161,17 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button  id="GoogleLLC" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                            <button id="GoogleLLC" onclick="taskFunc(this.id,'GoogleLLCTitle')"
+                                class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                     <div class="bg-sky-50 p-6 rounded-2xl">
                         <div class="mb-6">
                             <p class="bg-white inline-flex rounded-lg py-1 px-2 mb-4 font-medium">Glassdoar</p>
-                            <h5 class="text-2xl font-medium mb-4">Improve Job searching </h5>
+                            <h5 id="GlassdoarTitle" class="text-2xl font-medium mb-4">Improve Job searching </h5>
                             <div class="p-4 bg-white rounded-lg text-gray-600">
-                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                                <p class="line-clamp-2">Store the user's preference in localStorage, update CSS
+                                    variables dynamically, and apply a smooth transition effect.</p>
                             </div>
                         </div>
                         <div class="flex justify-between items-center border-t border-dashed pt-2 border-gray-400">
@@ -163,13 +179,30 @@
                                 <p>Deadline</p>
                                 <p class="font-medium">25th march 2025</p>
                             </div>
-                            <button  id="Glassdoar" onclick="taskFunc(this.id)"  class="btn btn-primary">Completed</button>
+                            <button id="Glassdoar" onclick="taskFunc(this.id,'GlassdoarTitle')"
+                                class="btn btn-primary">Completed</button>
                         </div>
                     </div>
                 </section>
                 <!-- all tasks section end -->
             </div>
-            <div class="col-span-3 bg-white rounded-2xl "></div>
+            <div class="col-span-3 bg-white rounded-2xl ">
+                <div class="p-6 flex flex-col items-center gap-4">
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/activity.png" alt="">
+                        <h4 class="text-xl font-medium">Activity log</h4>
+                    </div>
+                    <button onclick="clearAll()" class="btn btn-primary btn-sm px-6">Clear History</button>
+                </div>
+                <div id="Completed-tasks" class="p-8 flex flex-col gap-3">
+                    <!-- <div class="p-2 bg-sky-50 rounded-lg">
+                        <p>You have Complete The Task <span>Add Dark Mode</span> at 12:48:15 PM</p>
+                    </div>
+                    <div class="p-2 bg-sky-50 rounded-lg">
+                        <p>You have Complete The Task <span>Add Dark Mode</span> at 12:48:15 PM</p>
+                    </div> -->
+                </div>
+            </div>
         </section>
     </main>
     <!--main section end  -->
