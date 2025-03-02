@@ -40,10 +40,8 @@ function TotalTaskDone() {
     totalTaskDone.innerText = newTotalTaskDone;
 }
 
-
 // reload page to clear prev data
 function clearAll() {
-    // window.location.href = './../index.html';
     const completedTasks = document.getElementById('Completed-tasks');
     completedTasks.innerHTML = '';
 }
