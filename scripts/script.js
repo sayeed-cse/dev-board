@@ -65,13 +65,12 @@ today.innerHTML = `
 function changeTheme() {
     const themeColor = ['bg-sky-100', 'bg-red-100', 'bg-green-100', 'bg-orange-100', 'bg-blue-100'];
 
-    let randomColor = 0;
-    let random = Math.round(Math.random() * 5);
-    if (randomColor === random) {
-        random = Math.round(Math.random() * 5);
+    let random = Math.floor(Math.random() * 4) + 1;
+    let currentClass = document.body.classList.value;
+    while (currentClass.includes(themeColor[random])) {
+        random = Math.floor(Math.random() * 4) + 1;
+
     }
-    else {
-        randomColor = random;
-        document.body.classList = themeColor[randomColor];
-    }
+        document.body.classList = themeColor[random];
+    console.log(random)
 }
