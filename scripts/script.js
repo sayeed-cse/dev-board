@@ -67,10 +67,9 @@ function changeTheme() {
 
     let random = Math.floor(Math.random() * 4) + 1;
     let currentClass = document.body.classList.value;
+   
     while (currentClass.includes(themeColor[random])) {
         random = Math.floor(Math.random() * 4) + 1;
-
     }
         document.body.classList = themeColor[random];
-    console.log(random)
 }
