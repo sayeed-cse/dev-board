@@ -18,7 +18,6 @@ function taskFunc(id, titleId) {
         <p>You have Complete The Task ${title} at ${timeNow}</p>
     </div>
     `
-
 }
 
 function TaskAssigned() {
@@ -62,12 +61,12 @@ today.innerHTML = `
 <h5 class="font-bold">${formattedDate}</h5>
 `;
 
+// changing theme
 function changeTheme() {
     const themeColor = ['bg-sky-100', 'bg-red-100', 'bg-green-100', 'bg-orange-100', 'bg-blue-100'];
 
     let randomColor = 0;
     let random = Math.round(Math.random() * 5);
-    console.log(random);
     if (randomColor === random) {
         random = Math.round(Math.random() * 5);
     }
