@@ -35,29 +35,57 @@
     <main class="container mx-auto pb-28">
         <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title font-semibold">Question-1: What are the different ways to select an element in the DOM?</div>
-            <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse-title font-semibold">Question-1: What are the different ways to select an element in
+                the DOM?</div>
+            <div class="collapse-content text-sm">
+                <h5 class="text-lg font-medium ps-2">Here are Some different ways to select an element in the DOM.</h5>
+                <ul class="list-inside list-decimal leading-8 ps-5 text-base">
+                    <li><strong>By ID .</strong> Example: document.getElementById("myId")</li>
+                    <li><strong>By Class Name .</strong> Example: document.getElementsByClassName("myClass")</li>
+                    <li><strong>By Tag Name .</strong> Example: document.getElementsByTagName("p")</li>
+                    <li><strong>By Query Selector .</strong> Example: document.querySelector(".myClass")</li>
+                    <li><strong>By Query Selector All .</strong> Example: document.querySelectorAll(".myClass")</li>
+                    <li><strong>By Name Attribute .</strong> Example: document.getElementsByName("username")</li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
-            <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse-title font-semibold">Question-2: What is the difference between innerHTML, innerText,
+                and textContent ?</div>
+            <div class="collapse-content text-sm">
+                <h5 class="text-lg font-medium ps-2">Differences between innerHTML, innerText, and textContent:</h5>
+                <ul class="list-inside list-decimal leading-8 ps-5 text-base">
+                    <li><strong>innerHTML .</strong> Returns or sets the HTML content inside an element.</li>
+                    <li><strong>innerText .</strong> Returns or sets only the visible text inside an element.</li>
+                    <li><strong>textContent .</strong> Returns or sets all text content, including hidden text.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title font-semibold">Question-3: What is event delegation in the DOM?</div>
-            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse-content text-sm"><p>Event delegation is a technique where a single parent element handles events for multiple child elements using event bubbling. Instead of attaching event listeners to each child, we attach a single listener to the parent and use event.target to identify the clicked element.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title font-semibold">Question-4: What is event bubbling in the DOM?</div>
-            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-          </div>
-          <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+            <div class="collapse-content text-sm"><p>Event bubbling is a behavior where an event starts at the target element and propagates upward through its parent elements, all the way to the document root.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-100 border border-base-300">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</div>
-            <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-          </div>
+            <div class="collapse-title font-semibold">Question-5: How do you create, add, and remove elements using
+                JavaScript?</div>
+            <div class="collapse-content text-sm"><h5 class="text-lg font-medium ps-2">Creating, Adding, and Removing Elements in JavaScript. </h5>
+                <ul class="list-inside list-decimal leading-8 ps-5 text-base">
+                    <li><strong>Creating an Element</strong> Create an Element using createElement() method</li>
+                    <li><strong>Adding an Element to the DOM</strong> ReAppend as a Child using appendChild() method</li>
+                    <li><strong>Removing an Element from the DOM .</strong> Remove Child from Parent using removeChild() method  </li>
+                </ul>
+            </div>
+        </div>
     </main>
     <!--main section end  -->
 

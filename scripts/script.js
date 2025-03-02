@@ -62,7 +62,6 @@ today.innerHTML = `
 <h5 class="font-bold">${formattedDate}</h5>
 `;
 
-
 function changeTheme() {
     const themeColor = ['bg-sky-100', 'bg-red-100', 'bg-green-100', 'bg-orange-100', 'bg-blue-100'];
 
@@ -74,11 +73,6 @@ function changeTheme() {
     }
     else {
         randomColor = random;
-        document.body.classList = themeColor[randomColor]
-
+        document.body.classList = themeColor[randomColor];
     }
-
-
-
-    console.log(document.body.classList)
 }
